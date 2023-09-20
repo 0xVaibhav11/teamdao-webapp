@@ -1,0 +1,12 @@
+$primary-color: #29FF2F;
+$secondary-color: #FFFFFF;
+$bg-color: #0B150B;
+
+$main-font: var(--bebas-neue);
+$teamdao-font: var(--teamdao-typeface);
+
+:export {
+    primaryColor: $primary-color;
+    secondaryColor: $secondary-color;
+    bgColor: $bg-color;
+}

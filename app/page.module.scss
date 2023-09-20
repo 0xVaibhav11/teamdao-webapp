@@ -1,9 +1,148 @@
+@import "./variables.module.scss";
+@import "./breakpoints.scss";
+
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: teal;
   width: 100%;
   min-height: 200vh;
+  font-family: $teamdao-font;
+
+  .header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .headerBg {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
+      }
+
+      >img {
+
+        width: 100%;
+        height: 100%;
+        image-rendering: optimizeSpeed;
+        object-fit: cover;
+      }
+    }
+
+    .nav {
+      width: 55%;
+      height: 10vh;
+      padding: 1rem;
+      border-radius: 999px;
+      backdrop-filter: blur(10px);
+      background-color: rgba(0, 0, 0, 0.32);
+      z-index: 999;
+      position: fixed;
+      top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .left {
+        padding: 8px;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+          width: 150px;
+          height: auto;
+          cursor: pointer;
+        }
+
+        .links {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          >div {
+            cursor: pointer;
+          }
+
+          .active {
+            color: $primary-color;
+            transition: all ease 250ms;
+          }
+
+          >a {
+            color: rgba(255, 255, 255, 0.5);
+
+            &:hover,
+            &:focus,
+            &:active {
+              color: $primary-color;
+            }
+          }
+
+        }
+
+      }
+
+      .cta {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        .ctaBtn {
+          overflow: hidden;
+          position: relative;
+          width: fit-content;
+          padding: 8px 16px;
+          border-radius: 9rem;
+          border: 2px solid $primary-color;
+          color: $primary-color;
+          background-color: $bg-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          >span {
+            z-index: 9;
+          }
+
+          .shine {
+            position: absolute;
+            opacity: 0.3;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $primary-color;
+            background: radial-gradient(circle, rgba(0, 255, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+          }
+
+          .bg {
+            position: absolute;
+            z-index: 2;
+            backdrop-filter: blur(10px);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(41, 41, 41, 0.5) 20%, $bg-color 80%);
+          }
+
+        }
+      }
+    }
+
+  }
+
 }

@@ -1,0 +1,62 @@
+@import "./variables.module.scss";
+@import "./breakpoints.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: all ease 250ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: $bg-color;
+  font-size: 1rem;
+  font-family: $main-font;
+  line-height: 1.5;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  border: 2px solid #35353531;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $primary-color black;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 0px;
+  border: 0px none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
