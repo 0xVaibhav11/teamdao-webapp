@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "./page.module.scss";
 import Header from "./components/home/header";
 import About from "./components/home/about";
+import OurteamSec from "./components/home/ourteam";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
@@ -11,12 +12,12 @@ export default function Home() {
 
   const headerRef = useRef<HTMLElement>(null);
   const isHeaderInView = useInView(headerRef, {
-    margin: "-50% 0%",
+    margin: "-2% 0%",
   });
 
   const aboutRef = useRef<HTMLElement>(null);
   const isAboutInView = useInView(aboutRef, {
-    margin: "-50% 0%",
+    margin: "-10% 0%",
   });
 
   const ourteamRef = useRef<HTMLElement>(null);
@@ -51,9 +52,11 @@ export default function Home() {
         <Header sectionInView={sectionInView} />
       </header>
       <section ref={aboutRef} className={styles.about} id="about">
-        <About />
+        <About sectionInView={sectionInView} />
       </section>
-      <section ref={ourteamRef} id="our-team"></section>
+      <section ref={ourteamRef} id="our-team">
+        <OurteamSec />
+      </section>
       <section ref={bfsRef} id="bfs"></section>
       <section id="team-up">hi</section>
       <footer id="footer"></footer>

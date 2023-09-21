@@ -194,7 +194,245 @@
   }
 
   .about {
-    background-color: yellow;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .indicatorContainer {
+      position: absolute;
+      left: 3%;
+      // align-self: center;
+      z-index: 99;
+      width: 2rem;
+      height: 5rem;
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .indicator {
+        width: fit-content;
+        transition: all 250ms ease;
+
+        .outer {
+          width: 1.5rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          opacity: 0.6;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(47, 47, 47);
+
+          .inner {
+            width: 80%;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            background-color: rgb(121, 120, 120);
+          }
+        }
+      }
+
+      .activeInd {
+        width: fit-content;
+        transition: all 250ms ease;
+
+        .outer {
+          width: 1.5rem;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(1, 96, 1);
+
+          .inner {
+            width: 80%;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: green;
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: rgb(0, 0, 0);
+          background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 48%, rgba(0, 0, 0, 1) 100%);
+        }
+
+        >img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .content {
+        position: absolute;
+        overflow: hidden;
+        z-index: 9;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left {
+          position: relative;
+          padding: 5%;
+          width: 50%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          >img {
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            animation: uparNiche ease-in-out 5s infinite alternate;
+
+            @keyframes uparNiche {
+              0% {
+                transform: translateY(-5%);
+              }
+
+              50% {
+                transform: translateY(0%);
+              }
+
+              100% {
+                transform: translateY(-5%);
+              }
+            }
+          }
+
+          .txts {
+            position: absolute;
+            z-index: 10;
+            left: 15%;
+            font-size: 4rem;
+            font-weight: 100;
+            line-height: 1;
+            font-family: $main-font;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+          }
+        }
+
+        .right {
+          width: 50%;
+          height: 100%;
+          display: flex;
+          padding-right: 10%;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+
+          >p {
+            font-size: 1.2rem;
+            text-wrap: balance;
+          }
+
+          >h1 {
+            font-size: 2.8rem;
+            font-weight: 100;
+            font-family: $main-font;
+          }
+
+          .graph {
+            width: 70%;
+            height: auto;
+            align-self: center;
+
+            >img {
+              width: 100%;
+              height: auto;
+              object-fit: contain;
+            }
+          }
+
+          .quote {
+            font-size: 1.7rem;
+            color: $primary-color;
+            margin-bottom: 1rem;
+            font-style: italic;
+          }
+        }
+      }
+
+      .card2 {
+        width: 100%;
+        height: 100vh;
+        z-index: 7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: blueviolet;
+      }
+
+      .card3 {
+        width: 100%;
+        height: 100vh;
+        z-index: 8;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(43, 226, 189);
+      }
+
+      .card4 {
+        width: 100%;
+        height: 100vh;
+        z-index: 9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(226, 43, 43);
+      }
+
+    }
   }
 
 }
