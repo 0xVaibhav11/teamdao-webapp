@@ -1,0 +1,15 @@
+
+> teamdao-webapp@0.1.0 lint /home/vaibhav/projects/some-serious-shit/teamdao-webapp
+> next lint
+
+
+./app/components/home/header.tsx
+38:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/components/logo.tsx
+7:5  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+./app/page.tsx
+21:6  Warning: React Hook useEffect has a missing dependency: 'isHeaderVisible'. Either include it or remove the dependency array.  react-hooks/exhaustive-deps
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules

@@ -6,7 +6,57 @@
   min-height: 200vh;
   font-family: $teamdao-font;
 
+  .cta {
+    width: 20%;
+    display: flex;
+    align-items: center;
+
+    .ctaBtn {
+      overflow: hidden;
+      position: relative;
+      width: fit-content;
+      padding: 8px 16px;
+      border-radius: 9rem;
+      border: 2px solid $primary-color;
+      color: $primary-color;
+      background-color: $bg-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      >span {
+        z-index: 9;
+      }
+
+      .shine {
+        position: absolute;
+        opacity: 0.3;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $primary-color;
+        background: radial-gradient(circle, rgba(0, 255, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      .bg {
+        position: absolute;
+        z-index: 2;
+        backdrop-filter: blur(10px);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(41, 41, 41, 0.5) 20%, $bg-color 80%);
+      }
+
+    }
+  }
+
   .header {
+    position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -14,7 +64,8 @@
     align-items: center;
 
     .headerBg {
-      position: relative;
+      position: absolute;
+      z-index: 1;
       width: 100%;
       height: 100%;
 
@@ -26,10 +77,9 @@
       }
 
       >img {
-
         width: 100%;
         height: 100%;
-        image-rendering: optimizeSpeed;
+        // image-rendering: optimizeSpeed;
         object-fit: cover;
       }
     }
@@ -93,56 +143,58 @@
       }
 
       .cta {
-        width: 20%;
-        display: flex;
-        align-items: center;
+
         justify-content: flex-end;
+      }
 
-        .ctaBtn {
-          overflow: hidden;
-          position: relative;
-          width: fit-content;
-          padding: 8px 16px;
-          border-radius: 9rem;
-          border: 2px solid $primary-color;
-          color: $primary-color;
-          background-color: $bg-color;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
 
-          >span {
-            z-index: 9;
+    }
+
+    .hero {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      padding: 5%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .heroTxt {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .logo {
+          width: 120px;
+          height: auto;
+        }
+
+        .txts {
+          >h1 {
+            font-family: $main-font;
+            font-size: 5rem;
+            font-weight: 200;
+            line-height: 1;
           }
 
-          .shine {
-            position: absolute;
-            opacity: 0.3;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: $primary-color;
-            background: radial-gradient(circle, rgba(0, 255, 0, 1) 0%, rgba(255, 255, 255, 0) 100%);
+          >p {
+            font-size: 1.5rem;
           }
+        }
 
-          .bg {
-            position: absolute;
-            z-index: 2;
-            backdrop-filter: blur(10px);
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, rgba(41, 41, 41, 0.5) 20%, $bg-color 80%);
-          }
-
+        .cta {
+          margin-top: 0.5rem;
         }
       }
     }
 
+  }
+
+  .about {
+    background-color: yellow;
   }
 
 }

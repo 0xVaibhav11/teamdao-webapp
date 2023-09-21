@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/parallax": "^9.7.3",
     "@react-spring/web": "^9.7.3",
     "@types/node": "20.6.2",
     "@types/react": "18.2.22",
@@ -19,9 +20,11 @@
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive-carousel": "^3.2.23",
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.6.0",
     "sass": "^1.67.0"
   }
 }
