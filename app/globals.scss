@@ -35,21 +35,21 @@ a {
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
-* {
+body {
   scrollbar-width: thin;
   scrollbar-color: $primary-color black;
 }
 
 /* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 5px;
 }
 
-*::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: black;
 }
 
-*::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background-color: $primary-color;
   border-radius: 0px;
   border: 0px none;

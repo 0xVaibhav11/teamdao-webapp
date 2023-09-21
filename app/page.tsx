@@ -4,8 +4,11 @@ import styles from "./page.module.scss";
 import Header from "./components/home/header";
 import About from "./components/home/about";
 import OurteamSec from "./components/home/ourteam";
+import TeamUpSec from "./components/home/teamup";
 import { useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import BfsSec from "./components/home/bfs";
+import Footer from "./components/home/footer";
 
 export default function Home() {
   const [sectionInView, setSectionInView] = useState("");
@@ -17,12 +20,12 @@ export default function Home() {
 
   const aboutRef = useRef<HTMLElement>(null);
   const isAboutInView = useInView(aboutRef, {
-    margin: "-10% 0%",
+    margin: "-2% 0%",
   });
 
   const ourteamRef = useRef<HTMLElement>(null);
   const isOurteamInView = useInView(ourteamRef, {
-    margin: "-50% 0%",
+    margin: "-20% 0%",
   });
 
   const bfsRef = useRef<HTMLElement>(null);
@@ -39,6 +42,8 @@ export default function Home() {
       setSectionInView("our-team");
     } else if (isBfsInView) {
       setSectionInView("bfs");
+    } else {
+      setSectionInView("");
     }
   }, [isBfsInView, isHeaderInView, isOurteamInView, isAboutInView]);
 
@@ -54,12 +59,18 @@ export default function Home() {
       <section ref={aboutRef} className={styles.about} id="about">
         <About sectionInView={sectionInView} />
       </section>
-      <section ref={ourteamRef} id="our-team">
+      <section className={styles.ourTeam} ref={ourteamRef} id="our-team">
         <OurteamSec />
       </section>
-      <section ref={bfsRef} id="bfs"></section>
-      <section id="team-up">hi</section>
-      <footer id="footer"></footer>
+      <section className={styles.bfs} ref={bfsRef} id="bfs">
+        <BfsSec />
+      </section>
+      <section className={styles.teamup} id="team-up">
+        <TeamUpSec />
+      </section>
+      <footer className={styles.footer} id="footer">
+        <Footer />
+      </footer>
     </main>
   );
 }

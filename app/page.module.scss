@@ -435,4 +435,343 @@
     }
   }
 
+  .ourTeam {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    border: none;
+
+    .bg {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      z-index: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: green;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 0) 48%, rgba(0, 0, 0, 1) 100%);
+      }
+
+      >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+      }
+    }
+
+    .content {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 3;
+
+      .crsl {
+        width: 100%;
+        height: 70%;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .wrapper {
+          margin-left: 3rem;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          gap: 1rem;
+
+          .card {
+            width: 20rem;
+            aspect-ratio: 250/350;
+            background-color: black;
+            border-radius: 0.5rem;
+
+
+          }
+        }
+      }
+    }
+  }
+
+  .bfs {
+    width: 100%;
+    height: 100vh;
+    border: none;
+
+    .container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      .foregroundBfs {
+        position: absolute;
+        top: 5rem;
+        left: 5rem;
+        width: max-content;
+        height: max-content;
+        z-index: 30;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        >h1 {
+          font-family: $main-font;
+          font-weight: 100;
+          font-size: 3rem;
+        }
+
+        >h3 {
+          font-family: $main-font;
+          font-weight: 100;
+          font-size: 2rem;
+        }
+
+        >p {
+          font-size: 1.2rem;
+
+          >span {
+            color: $primary-color;
+          }
+        }
+      }
+
+      .bfsbg {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background-color: $bg-color;
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 5;
+          height: 100%;
+          background: rgb(0, 0, 0);
+          background: linear-gradient(180deg, rgba(0, 39, 1, 0.482) 0%, rgba(255, 255, 255, 0) 48%, rgba(0, 39, 1, 0.482) 100%);
+        }
+
+        .card {
+          width: 33.333%;
+          height: 100%;
+          position: relative;
+
+          >img {
+            opacity: 0.32;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+          }
+
+          .txt {
+            position: absolute;
+            z-index: 9;
+            width: 100%;
+            height: max-content;
+            left: 3rem;
+            bottom: 3rem;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem;
+            justify-content: center;
+
+            >h1 {
+              width: max-content;
+              font-size: 3rem;
+              color: $primary-color;
+              background-color: rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(2px);
+            }
+
+            >p {
+              font-size: 2rem;
+              width: max-content;
+              background-color: rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(2px);
+
+            }
+
+            >button {
+
+              font-family: $teamdao-font;
+              font-size: 1.3rem;
+              letter-spacing: 1px;
+              width: fit-content;
+              background-color: rgba(255, 255, 255, 0.1);
+              backdrop-filter: blur(2px);
+              border-radius: 5px;
+              padding: 2% 5%;
+              border: none;
+
+              &:hover {
+                cursor: pointer;
+                background-color: rgba(255, 255, 255, 0.218);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .teamup {
+    width: 100%;
+    height: 100vh;
+    border: none;
+    overflow: hidden;
+
+    .tcontainer {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        >img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .foreground {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 4;
+        }
+
+        .bgImg {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+        }
+      }
+
+      .tcontent {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 5%;
+        z-index: 20;
+
+
+        >h1 {
+          font-family: $main-font;
+          font-weight: 100;
+          font-size: 4rem;
+
+        }
+
+        >p {
+          font-size: 1.3rem;
+          text-align: center;
+          text-wrap: balance;
+          line-height: 1;
+        }
+
+        .cta {
+          width: auto;
+          margin-top: 3rem;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+
+
+  }
+
+  .footer {
+    width: 100%;
+    height: 25vh;
+
+    .fcontainer {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .left {
+      width: 80%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .logoContainer {
+        width: 50%;
+
+        >p {
+          opacity: 0.6;
+          font-size: 1rem;
+        }
+      }
+
+      .links {
+        padding-top: 5%;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+
+        >a {
+          color: grey;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+
+
+    }
+
+    .right {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .cta {
+        width: auto;
+      }
+    }
+  }
+
 }
