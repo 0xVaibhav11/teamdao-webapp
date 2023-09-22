@@ -39,6 +39,10 @@
     display: flex;
     align-items: center;
 
+    @include media("<=tablet") {
+      width: 100%;
+    }
+
     .ctaBtn {
       overflow: hidden;
       position: relative;
@@ -126,6 +130,19 @@
       align-items: center;
       justify-content: space-between;
 
+      .cta {
+
+        @include media("<=tablet") {
+          width: 100%;
+          margin-left: 3rem;
+        }
+      }
+
+      @include media("<=tablet") {
+        width: max-content;
+
+      }
+
       .left {
         padding: 8px;
         width: 80%;
@@ -146,6 +163,11 @@
           display: flex;
           align-items: center;
           justify-content: space-around;
+
+          @include media("<=tablet") {
+            display: none;
+
+          }
 
           >div {
             cursor: pointer;
@@ -188,6 +210,10 @@
       align-items: flex-end;
       justify-content: flex-end;
 
+      @include media("<=tablet") {
+        padding: 0 10%;
+      }
+
       .heroTxt {
         width: 100%;
         display: flex;
@@ -206,15 +232,29 @@
             font-size: 5rem;
             font-weight: 200;
             line-height: 1;
+
+            @include media("<=tablet") {
+              text-wrap: balance;
+            }
           }
 
           >p {
             font-size: 1.5rem;
+
+            @include media("<=tablet") {
+              text-wrap: balance;
+            }
           }
         }
 
         .cta {
           margin-top: 0.5rem;
+
+
+          @include media("<=tablet") {
+            margin-top: 0.9rem;
+
+          }
         }
       }
     }
@@ -263,6 +303,11 @@
           align-items: center;
           background-color: rgb(47, 47, 47);
 
+          @include media("<=tablet") {
+            width: 1rem;
+
+          }
+
           .inner {
             width: 80%;
             border-radius: 50%;
@@ -284,6 +329,11 @@
           justify-content: center;
           align-items: center;
           background-color: rgb(1, 96, 1);
+
+          @include media("<=tablet") {
+            width: 1rem;
+
+          }
 
           .inner {
             width: 80%;
@@ -341,6 +391,13 @@
         align-items: center;
         justify-content: center;
 
+        @include media("<=tablet") {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+        }
+
         .left {
           position: relative;
           padding: 5%;
@@ -350,12 +407,26 @@
           align-items: center;
           justify-content: center;
 
+          @include media("<=tablet") {
+            width: 100%;
+            height: 40%;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 0 10%;
+
+          }
+
           >img {
             opacity: 0.7;
             width: 100%;
             height: 100%;
             object-fit: contain;
             animation: uparNiche ease-in-out 5s infinite alternate;
+
+            @include media("<=tablet") {
+              height: 100%;
+              width: auto;
+            }
 
             @keyframes uparNiche {
               0% {
@@ -386,6 +457,13 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: center;
+
+            @include media("<=tablet") {
+              font-size: 5rem;
+              left: 10%;
+              height: max-content;
+              bottom: 0;
+            }
           }
         }
 
@@ -397,6 +475,15 @@
           flex-direction: column;
           align-items: flex-start;
           justify-content: center;
+
+          @include media("<=tablet") {
+            width: 100%;
+            height: max-content;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 0 10%;
+
+          }
 
           >p {
             font-size: 1.2rem;
@@ -413,6 +500,10 @@
             width: 70%;
             height: auto;
             align-self: center;
+
+            @include media("<=tablet") {
+              display: none;
+            }
 
             >img {
               width: 100%;
@@ -498,6 +589,11 @@
         height: auto;
         object-fit: cover;
         object-position: top;
+
+        @include media("<=tablet") {
+          height: 100%;
+          width: auto;
+        }
       }
     }
 
@@ -519,6 +615,11 @@
         align-self: center;
         justify-self: center;
         cursor: grab;
+
+        @include media("<=tablet") {
+          height: 60%;
+
+        }
 
 
         &::-webkit-scrollbar {
@@ -684,6 +785,12 @@
         align-items: flex-start;
         justify-content: center;
 
+
+
+        @include media("<=tablet") {
+          left: 10%;
+        }
+
         >h1 {
           font-family: $main-font;
           font-weight: 100;
@@ -752,12 +859,22 @@
             gap: 1rem;
             justify-content: center;
 
+            @include media("<=tablet") {
+              left: 10%;
+              bottom: 20%;
+              width: 80%;
+            }
+
             >h1 {
               width: max-content;
               font-size: 3rem;
               color: $primary-color;
               background-color: rgba(255, 255, 255, 0.1);
               backdrop-filter: blur(2px);
+
+              @include media("<=tablet") {
+                font-size: 2rem;
+              }
             }
 
             >p {
@@ -766,6 +883,11 @@
               background-color: rgba(255, 255, 255, 0.1);
               backdrop-filter: blur(2px);
 
+              @include media("<=tablet") {
+                font-size: 1rem;
+                text-wrap: balance;
+                width: 100%;
+              }
             }
 
             >button {
@@ -779,6 +901,12 @@
               border-radius: 5px;
               padding: 2% 5%;
               border: none;
+
+              @include media("<=tablet") {
+                font-size: 1rem;
+                padding: 2% 10%;
+
+              }
 
               &:hover {
                 cursor: pointer;
@@ -819,6 +947,12 @@
           width: 100%;
           height: 100%;
           z-index: 4;
+
+          @include media("<=tablet") {
+            height: auto;
+            width: 100%;
+            bottom: 0;
+          }
         }
 
         .bgImg {
@@ -826,6 +960,12 @@
           width: 100%;
           height: 100%;
           z-index: 2;
+
+          @include media("<=tablet") {
+            height: auto;
+            width: 100%;
+            bottom: 0;
+          }
         }
       }
 
@@ -839,6 +979,10 @@
         justify-content: flex-start;
         margin-top: 5%;
         z-index: 20;
+
+        @include media("<=tablet") {
+          top: 20%;
+        }
 
 
         >h1 {
@@ -871,61 +1015,100 @@
     width: 100%;
     height: 25vh;
 
+    @include media("<=tablet") {
+      height: max-content;
+      padding: 5%;
+
+      .cta {
+        display: none;
+      }
+    }
+
     .fcontainer {
       width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
 
-    .left {
-      width: 80%;
-      height: 100%;
-      padding-left: 5%;
-      padding-right: 10%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .logoContainer {
-        width: 50%;
-
-        >p {
-          opacity: 0.6;
-          font-size: 1rem;
-        }
+      @include media("<=tablet") {
+        flex-direction: column;
       }
 
-      .links {
-        padding-top: 5%;
+
+      .left {
         width: 80%;
         height: 100%;
+        padding-left: 5%;
+        padding-right: 10%;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-evenly;
+        align-items: center;
+        justify-content: center;
 
-        >a {
-          color: grey;
+        @include media("<=tablet") {
+          width: 100%;
+          padding: 0;
+        }
 
-          &:hover {
-            color: $primary-color;
+        .logoContainer {
+          width: 50%;
+
+          @include media("<=tablet") {
+            width: max-content;
+          }
+
+          >p {
+            opacity: 0.6;
+            font-size: 1rem;
+
+            @include media("<=tablet") {
+              font-size: 0.7rem;
+            }
           }
         }
+
+        .links {
+          padding-top: 5%;
+          width: 80%;
+          height: 100%;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-evenly;
+
+          @include media("<=tablet") {
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 0;
+          }
+
+          >a {
+            color: grey;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+
+
       }
 
+      .right {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-    }
+        .cta {
+          width: 100%;
 
-    .right {
-      width: 20%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      .cta {
-        width: auto;
+          @include media("<=tablet") {
+            flex-direction: column;
+            align-items: flex-end;
+            padding: 0;
+          }
+        }
       }
     }
   }
