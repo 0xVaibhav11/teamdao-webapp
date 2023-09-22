@@ -49,6 +49,20 @@ Props) {
     }
   }, [scrollNum]);
 
+  function handleClick(layer: string) {
+    if (layer === "1st") {
+      parallaxRef.current?.scrollTo(0);
+    } else if (layer === "2nd") {
+      parallaxRef.current?.scrollTo(1);
+    } else if (layer === "3rd") {
+      parallaxRef.current?.scrollTo(2);
+    } else if (layer === "4th") {
+      parallaxRef.current?.scrollTo(3);
+    } else {
+      console.log("not valid");
+    }
+  }
+
   return (
     <>
       <Parallax
@@ -224,6 +238,9 @@ Props) {
             <div
               key={i}
               id={i}
+              onClick={() => {
+                handleClick(i);
+              }}
               className={`${styles.indicator} ${
                 layerInView === i ? styles.activeInd : ""
               }`}

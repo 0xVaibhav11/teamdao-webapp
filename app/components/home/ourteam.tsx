@@ -2,17 +2,70 @@
 import Image from "next/image";
 import styles from "../../page.module.scss";
 import ArraySubsetComponent from "../infiniteSubset";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRef } from "react";
 
 export default function OurteamSec() {
   const crslData = [
-    { id: 1, content: "hello1" },
-    { id: 2, content: "hello2" },
-    { id: 3, content: "hello3" },
-    { id: 4, content: "hello4" },
-    { id: 5, content: "hello5" },
+    {
+      id: "algo",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamalgo.png",
+      txtLogo: "algo-txt.png",
+    },
+    {
+      id: "algo",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamalgo.png",
+      txtLogo: "algo-txt.png",
+    },
+    {
+      id: "algo",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamalgo.png",
+      txtLogo: "algo-txt.png",
+    },
+    {
+      id: "snad",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamsandbox.png",
+      txtLogo: "sand-txt.png",
+    },
+    {
+      id: "klay",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamklay.png",
+      txtLogo: "klay-txt.png",
+    },
+    {
+      id: "klay",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamklay.png",
+      txtLogo: "klay-txt.png",
+    },
+    {
+      id: "klay",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamklay.png",
+      txtLogo: "klay-txt.png",
+    },
   ];
 
-  const largeArray: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const crslRef = useRef<HTMLDivElement>(null);
   return (
     <>
       <div className={styles.bg}>
@@ -27,33 +80,50 @@ export default function OurteamSec() {
         <div className={styles.overlay} />
       </div>
       <div className={styles.content}>
-        <div className={styles.crsl}>
-          <div className={styles.wrapper}>
-            {crslData.map((item) => {
+        <motion.div ref={crslRef} className={styles.crsl}>
+          <motion.div
+            whileTap={{ cursor: "grabbing" }}
+            drag="x"
+            dragConstraints={crslRef}
+            className={styles.wrapper}
+          >
+            {crslData.map((item, i) => {
               return (
-                <>
-                  <div key={item.id} className={styles.card}>
-                    <div className={styles.cardbg}></div>
-                    <div className={styles.contents}>
-                      <div className={styles.img}>
-                        <div className={styles.topImg}></div>
-                        <div className={styles.botttomImg}></div>
-                      </div>
-                      <div className={styles.txts}>
-                        <h1> First Place</h1>
-                        <p>For cod international tournament</p>
-                      </div>
-                      <div className={styles.ctabtn}>
-                        <p>more info</p>
-                      </div>
+                <div key={`key-${i}`} className={styles.card}>
+                  <div className={styles.cardbg} />
+                  <div className={styles.contents}>
+                    <div className={styles.img}>
+                      <Image
+                        className={styles.logoImg}
+                        src={`/Images/${item.teamLogo}`}
+                        alt="bg"
+                        width={100}
+                        height={100}
+                        priority
+                      />
+                      <Image
+                        className={styles.txtImg}
+                        src={`/Images/${item.txtLogo}`}
+                        alt="bg"
+                        width={100}
+                        height={100}
+                        priority
+                      />
+                    </div>
+                    <div className={styles.cardtxt}>
+                      <h1>{item.heading}</h1>
+                      <p>{item.desc}</p>
+                    </div>
+                    <div className={styles.ctabtn}>
+                      <p>{item.btnTxt}</p>
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
-          </div>
+          </motion.div>
           <div className={styles.indicator}></div>
-        </div>
+        </motion.div>
 
         <div className={styles.txts}>
           <h1>our pro teams</h1>
@@ -65,7 +135,6 @@ export default function OurteamSec() {
             <span>1500+</span>
             active players in 70 contries
           </p>
-          I
         </div>
       </div>
     </>

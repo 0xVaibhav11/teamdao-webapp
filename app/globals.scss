@@ -15,7 +15,7 @@ html {
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: $bg-color;
   font-size: 1rem;
   font-family: $main-font;
@@ -25,34 +25,21 @@ body {
 section {
   width: 100%;
   min-height: 100vh;
-  border: 2px solid #35353531;
+}
+
+*::selection {
+  color: $primary-color;
+  background-color: rgba(0, 0, 0, 0.463);
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-body {
-  scrollbar-width: thin;
-  scrollbar-color: $primary-color black;
-}
-
-/* Chrome, Edge, and Safari */
-body::-webkit-scrollbar {
-  width: 5px;
-}
-
-body::-webkit-scrollbar-track {
-  background: black;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: $primary-color;
-  border-radius: 0px;
-  border: 0px none;
 }
 
 @media (prefers-color-scheme: dark) {

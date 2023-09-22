@@ -15,17 +15,17 @@ export default function Home() {
 
   const headerRef = useRef<HTMLElement>(null);
   const isHeaderInView = useInView(headerRef, {
-    margin: "-2% 0%",
+    margin: "-10% 0%",
   });
 
   const aboutRef = useRef<HTMLElement>(null);
   const isAboutInView = useInView(aboutRef, {
-    margin: "-2% 0%",
+    margin: "-50% -10%",
   });
 
   const ourteamRef = useRef<HTMLElement>(null);
   const isOurteamInView = useInView(ourteamRef, {
-    margin: "-20% 0%",
+    margin: "-50% 0%",
   });
 
   const bfsRef = useRef<HTMLElement>(null);
@@ -46,10 +46,6 @@ export default function Home() {
       setSectionInView("");
     }
   }, [isBfsInView, isHeaderInView, isOurteamInView, isAboutInView]);
-
-  useEffect(() => {
-    console.log("section in view", sectionInView);
-  }, [sectionInView]);
 
   return (
     <main className={styles.main}>
