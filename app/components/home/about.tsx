@@ -103,7 +103,7 @@ Props) {
             <div className={styles.right}>
               <h1>TEAM DAO IS A GLOBAL ESPORTS BRAND</h1>
               <p>We are stable long term, Entertainment Brnad</p>
-              <p className={styles.quote}>`&quot;The NBA for Esports`&quot;</p>
+              <p className={styles.quote}>&quot;The NBA for Esports&quot;</p>
               <p>
                 We are well positioned to capture the growth of gaming in
                 esports, gaming marketplaces, and web3 gaming verticals
@@ -182,7 +182,7 @@ Props) {
             <div className={styles.right}>
               <h1>TEAM DAO IS A GLOBAL ESPORTS BRAND</h1>
               <p>We are stable long term, Entertainment Brnad</p>
-              <p className={styles.quote}>`&quot;The NBA for Esports`&quot;</p>
+              <p className={styles.quote}>&quot;The NBA for Esports&quot;</p>
               <p>
                 We are well positioned to capture the growth of gaming in
                 esports, gaming marketplaces, and web3 gaming verticals
