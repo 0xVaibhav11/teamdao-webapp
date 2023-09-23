@@ -184,8 +184,8 @@ Props) {
               <p>We are stable long term, Entertainment Brnad</p>
               <p className={styles.quote}>`&quot;The NBA for Esports`&quot;</p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa,
-                assumenda quasi nesciunt itaque hic ea perferendis aspernatur,
+                We are well positioned to capture the growth of gaming in
+                esports, gaming marketplaces, and web3 gaming verticals
               </p>
             </div>
           </div>
@@ -218,7 +218,7 @@ Props) {
               </div>
             </div>
             <div className={styles.right}>
-              <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+              <h1>TEAM DAO DOMINATES THE MOBILE GAMING ESPORTS NICHE</h1>
               <div className={styles.graph}>
                 <Image
                   src={"/Images/graph-cross.svg"}

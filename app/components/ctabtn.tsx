@@ -7,7 +7,7 @@ export default function CtaBtn(props: any) {
       <a href="#team-up" className={styles.ctaBtn}>
         <div className={styles.bg} />
         <div className={styles.shine} />
-        <span>{props?.content}</span>
+        <span>JOIN NOW</span>
       </a>
     </div>
   );

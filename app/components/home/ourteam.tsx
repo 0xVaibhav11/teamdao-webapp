@@ -24,28 +24,12 @@ export default function OurteamSec() {
       txtLogo: "algo-txt.png",
     },
     {
-      id: "algo",
-      heading: "First Place",
-      desc: "For call of duty international tournament",
-      btnTxt: "more info",
-      teamLogo: "teamalgo.png",
-      txtLogo: "algo-txt.png",
-    },
-    {
       id: "snad",
       heading: "First Place",
       desc: "For call of duty international tournament",
       btnTxt: "more info",
       teamLogo: "teamsandbox.png",
       txtLogo: "sand-txt.png",
-    },
-    {
-      id: "klay",
-      heading: "First Place",
-      desc: "For call of duty international tournament",
-      btnTxt: "more info",
-      teamLogo: "teamklay.png",
-      txtLogo: "klay-txt.png",
     },
     {
       id: "klay",

@@ -1,6 +1,6 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Bebas_Neue } from "next/font/google";
+import { Bebas_Neue, Roboto } from "next/font/google";
 import localFont from "next/font/local";
 
 const bebasNeue = Bebas_Neue({
@@ -8,31 +8,36 @@ const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
   variable: "--bebas-neue",
 });
-const teamDaoFont = localFont({
-  src: [
-    {
-      path: "./Fonts/Technology.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./Fonts/Technology-Italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "./Fonts/Technology-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./Fonts/Technology-BoldItalic.ttf",
-      weight: "700",
-      style: "italic",
-    },
-  ],
+const teamDaoFont = Roboto({
+  weight: "400",
+  subsets: ["latin"],
   variable: "--teamdao-typeface",
 });
+// const teamDaoFont = localFont({
+//   src: [
+//     {
+//       path: "./Fonts/Technology.ttf",
+//       weight: "400",
+//       style: "normal",
+//     },
+//     {
+//       path: "./Fonts/Technology-Italic.ttf",
+//       weight: "400",
+//       style: "italic",
+//     },
+//     {
+//       path: "./Fonts/Technology-Bold.ttf",
+//       weight: "700",
+//       style: "normal",
+//     },
+//     {
+//       path: "./Fonts/Technology-BoldItalic.ttf",
+//       weight: "700",
+//       style: "italic",
+//     },
+//   ],
+//   variable: "--teamdao-typeface",
+// });
 
 export const metadata: Metadata = {
   title: "T.E.A.M DAO",
