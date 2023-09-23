@@ -10,7 +10,7 @@ import {
   FunctionComponent,
   MutableRefObject,
 } from "react";
-import { useMotionValueEvent, useScroll } from "framer-motion";
+import { useMotionValueEvent, useScroll, motion } from "framer-motion";
 
 interface Props {
   sectionInView: string;
@@ -25,7 +25,8 @@ Props) {
   const [scrollNum, setScrollNum] = useState(0);
   const parallaxRef = useRef<IParallax>(null);
   const container = parallaxRef.current?.container as RefObject<HTMLElement>;
-  const indicatorCount = ["1st", "2nd", "3rd", "4th"];
+  const indicatorCount = ["1st", "2nd"];
+  // const indicatorCount = ["1st", "2nd", "3rd", "4th"];
   const { scrollY } = useScroll({
     container: container,
   });
@@ -36,17 +37,25 @@ Props) {
 
   useEffect(() => {
     //100% = 2262.39990234375
-    const fullScroll = 2262.39990234375;
+    // const fullScroll = 2262.39990234375;
+    //100% = 754.4000244140625; (for two pages)
+    const fullScroll = 754.4000244140625;
     const progress = (scrollNum / fullScroll) * 100;
-    if (progress <= 25) {
+    if (progress <= 50) {
       setLayerInView(indicatorCount[0]);
-    } else if (progress <= 50) {
-      setLayerInView(indicatorCount[1]);
-    } else if (progress <= 75) {
-      setLayerInView(indicatorCount[2]);
     } else if (progress <= 100) {
-      setLayerInView(indicatorCount[3]);
+      setLayerInView(indicatorCount[1]);
     }
+    // if (progress <= 25) {
+    //   setLayerInView(indicatorCount[0]);
+    // } else if (progress <= 50) {
+    //   setLayerInView(indicatorCount[1]);
+    // } else if (progress <= 75) {
+    //   setLayerInView(indicatorCount[2]);
+    // } else if (progress <= 100) {
+    //   setLayerInView(indicatorCount[3]);
+    // }
+    console.log(scrollNum);
   }, [scrollNum]);
 
   function handleClick(layer: string) {
@@ -71,7 +80,7 @@ Props) {
         style={{
           overflow: sectionInView === "about" ? "auto" : "hidden",
         }}
-        pages={4}
+        pages={2}
       >
         <ParallaxLayer sticky={{ start: 0, end: 1 }}>
           <div className={styles.bg}>
@@ -152,7 +161,7 @@ Props) {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer sticky={{ start: 2, end: 3 }}>
+        {/* <ParallaxLayer sticky={{ start: 2, end: 3 }}>
           <div className={styles.bg}>
             <Image
               src={"/Images/about1-bg.png"}
@@ -230,7 +239,7 @@ Props) {
               </div>
             </div>
           </div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
       </Parallax>
       <div className={styles.indicatorContainer}>
         {indicatorCount.map((i) => {
@@ -245,6 +254,9 @@ Props) {
                 layerInView === i ? styles.activeInd : ""
               }`}
             >
+              {/* <motion.div layoutId="indicator" className={styles.outer}>
+                <div className={styles.inner} />
+              </motion.div> */}
               <div className={styles.outer}>
                 <div className={styles.inner} />
               </div>
