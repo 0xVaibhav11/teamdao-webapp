@@ -55,7 +55,7 @@ Props) {
     // } else if (progress <= 100) {
     //   setLayerInView(indicatorCount[3]);
     // }
-    console.log(scrollNum);
+    // console.log(scrollNum);
   }, [scrollNum]);
 
   function handleClick(layer: string) {
