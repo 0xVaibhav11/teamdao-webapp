@@ -12,6 +12,11 @@
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y proximity;
 
+  @include media("<=tablet") {
+    height: calc(100vh + 20px);
+  }
+
+
   /* ===== Scrollbar CSS ===== */
   /* Firefox */
 
