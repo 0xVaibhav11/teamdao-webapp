@@ -1077,7 +1077,7 @@
     overflow: hidden;
 
     @include media("<=tablet") {
-      height: calc(100vh - 25vh);
+      height: 70vh;
     }
 
     .tcontainer {
