@@ -1076,6 +1076,10 @@
     border: none;
     overflow: hidden;
 
+    @include media("<=tablet") {
+      height: calc(100vh - 25vh);
+    }
+
     .tcontainer {
       width: 100%;
       height: 100%;
