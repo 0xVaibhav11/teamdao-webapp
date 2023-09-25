@@ -112,12 +112,12 @@ export default function OurteamSec() {
         <div className={styles.txts}>
           <h1>our pro teams</h1>
           <p>
-            <span>300k+</span>
-            follower across all players
+            <span>300k+ </span>
+            Follower across all players
           </p>
           <p>
-            <span>1500+</span>
-            active players in 70 contries
+            <span>1500+ </span>
+            Active players in 70 contries
           </p>
         </div>
       </div>

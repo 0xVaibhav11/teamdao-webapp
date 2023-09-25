@@ -5,7 +5,17 @@ import Logo from "../logo";
 import Link from "next/link";
 import Tabs from "../navTabs";
 
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
+import { useEffect } from "react";
+
 export default function Header({ sectionInView }: { sectionInView: string }) {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: true });
+
+  useEffect(() => {
+    animate("h1", { x: 0, opacity: 1 }, { delay: 0.25, duration: 0.5 });
+    animate("p", { x: 0, opacity: 1 }, { delay: stagger(0.3), duration: 0.7 });
+  }, [isInView]);
   return (
     <>
       <div className={styles.headerBg}>
@@ -57,7 +67,7 @@ export default function Header({ sectionInView }: { sectionInView: string }) {
               alt="logo"
             />
           </div>
-          <div className={styles.txts}>
+          <div ref={scope} className={styles.txts}>
             <h1>the #1 esports dao </h1>
             <p>
               TEAM DAO rigorously curates our list of games (web2 & web3) to

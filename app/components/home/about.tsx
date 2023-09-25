@@ -80,7 +80,7 @@ Props) {
         style={{
           overflow: sectionInView === "about" ? "auto" : "hidden",
         }}
-        pages={2}
+        pages={1}
       >
         <ParallaxLayer sticky={{ start: 0, end: 1 }}>
           <div className={styles.bg}>
@@ -120,7 +120,7 @@ Props) {
             </div>
           </div>
         </ParallaxLayer>
-        <ParallaxLayer sticky={{ start: 1, end: 2 }}>
+        {/* <ParallaxLayer sticky={{ start: 1, end: 2 }}>
           <div className={styles.bg}>
             <Image
               src={"/Images/about2-bg.png"}
@@ -160,7 +160,7 @@ Props) {
               </div>
             </div>
           </div>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
         {/* <ParallaxLayer sticky={{ start: 2, end: 3 }}>
           <div className={styles.bg}>
             <Image
@@ -241,8 +241,8 @@ Props) {
           </div>
         </ParallaxLayer> */}
       </Parallax>
-      <div className={styles.indicatorContainer}>
-        {indicatorCount.map((i) => {
+      {/* <div className={styles.indicatorContainer}> */}
+      {/* {indicatorCount.map((i) => {
           return (
             <div
               key={i}
@@ -257,13 +257,13 @@ Props) {
               {/* <motion.div layoutId="indicator" className={styles.outer}>
                 <div className={styles.inner} />
               </motion.div> */}
-              <div className={styles.outer}>
+      {/* <div className={styles.outer}>
                 <div className={styles.inner} />
               </div>
-            </div>
-          );
-        })}
-      </div>
+            </div> */}
+      {/* ); */}
+
+      {/* </div> */}
     </>
   );
 }

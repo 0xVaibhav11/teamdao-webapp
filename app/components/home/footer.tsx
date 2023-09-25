@@ -12,8 +12,8 @@ export default function Footer() {
         <div className={styles.logoContainer}>
           <Logo />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-            libero aliquid quaerat quidem sapiente dolor, a aperiam totam.
+            Jl. Pengubengan Kauh No.78, Kerobokan Kelod, Kec. Kuta Utara,
+            Kabupaten Badung, Bali 80361, Indonesia
           </p>
         </div>
         <div className={styles.links}>

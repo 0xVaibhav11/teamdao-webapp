@@ -3,8 +3,26 @@ import Image from "next/image";
 import styles from "../../page.module.scss";
 
 import { useEffect, useRef, useState } from "react";
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 
 export default function BfsSec() {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: true });
+
+  useEffect(() => {
+    animate("h1", { x: -75, opacity: 0 });
+    animate("h3", { x: -75, opacity: 0 });
+    animate("p", { x: -75, opacity: 0 });
+    if (isInView) {
+      animate("h1", { x: 0, opacity: 1 }, { delay: 0.25, duration: 0.5 });
+      animate("h3", { x: 0, opacity: 1 }, { delay: 0.25, duration: 0.5 });
+      animate(
+        "p",
+        { x: 0, opacity: 1 },
+        { delay: stagger(0.3), duration: 0.7 }
+      );
+    }
+  }, [isInView]);
   return (
     <div className={styles.container}>
       <div className={styles.bfsbg}>
@@ -52,17 +70,17 @@ export default function BfsSec() {
           </div>
         </div>
       </div>
-      <div className={styles.foregroundBfs}>
+      <div ref={scope} className={styles.foregroundBfs}>
         <h1>BATTLE FOR SUPERACY (BFS)</h1>
         <h3>our ESPORTS LEAGUE</h3>
         <p>
-          <span>100</span> active competitive teams per BFS
+          <span>100+</span> Active Teams per BFS
         </p>
         <p>
-          <span>8</span> bfs supreme leagues
+          <span>8</span> BFS Supreme Leagues
         </p>
         <p>
-          <span>weekly</span> bfs solo competitions
+          <span>Wekly</span> Solo Competitions
         </p>
       </div>
     </div>

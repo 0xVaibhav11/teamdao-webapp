@@ -2,10 +2,27 @@
 import Image from "next/image";
 import styles from "../../page.module.scss";
 
+import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import CtaBtn from "../ctabtn";
 
 export default function TeamUpSec() {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: true });
+
+  useEffect(() => {
+    animate("h1", { y: 75, opacity: 0 });
+    animate("p", { y: 75, opacity: 0 });
+    if (isInView) {
+      animate("h1", { y: 0, opacity: 1 }, { delay: 0.25, duration: 0.5 });
+      animate(
+        "p",
+        { y: 0, opacity: 1 },
+        { delay: stagger(0.3), duration: 0.7 }
+      );
+    }
+  }, [isInView]);
+
   return (
     <div className={styles.tcontainer}>
       <div className={styles.bg}>
@@ -28,7 +45,7 @@ export default function TeamUpSec() {
           priority
         />
       </div>
-      <div className={styles.tcontent}>
+      <div ref={scope} className={styles.tcontent}>
         <h1>TEAM UP</h1>
         <p>BE PART OF THE TOP WEB3 GAMING DAO AND COMMUNITY</p>
         <p>MADE BY GAMERS. FOR GAMERS.</p>
