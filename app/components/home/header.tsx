@@ -70,8 +70,8 @@ export default function Header({ sectionInView }: { sectionInView: string }) {
           <div ref={scope} className={styles.txts}>
             <h1>the #1 esports dao </h1>
             <p>
-              TEAM DAO rigorously curates our list of games (web2 & web3) to
-              ensure quality and sustainability.
+              Creating tournamanets for 3 Billion gamers. We are an incubator
+              for the next generation of champions.
             </p>
           </div>
           <CtaBtn content="JOIN THE DAO" />

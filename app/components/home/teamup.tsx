@@ -48,7 +48,7 @@ export default function TeamUpSec() {
       <div ref={scope} className={styles.tcontent}>
         <h1>TEAM UP</h1>
         <p>BE PART OF THE TOP WEB3 GAMING DAO AND COMMUNITY</p>
-        <p>MADE BY GAMERS. FOR GAMERS.</p>
+        <p>MADE BY GAMERS, FOR GAMERS.</p>
         <CtaBtn content={"JOIN THE DAO"} />
       </div>
     </div>

@@ -80,7 +80,7 @@ export default function BfsSec() {
           <span>8</span> BFS Supreme Leagues
         </p>
         <p>
-          <span>Wekly</span> Solo Competitions
+          <span>Weekly</span> Solo Competitions
         </p>
       </div>
     </div>

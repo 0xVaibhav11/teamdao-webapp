@@ -110,12 +110,26 @@ Props) {
               </div>
             </div>
             <div className={styles.right}>
-              <h1>TEAM DAO IS A GLOBAL ESPORTS BRAND</h1>
-              <p>We are stable long term, Entertainment Brnad</p>
-              <p className={styles.quote}>&quot;The NBA for Esports&quot;</p>
+              <h1>TEAM DAO IS A GLOBAL ESPORTS ECOSYSTEM</h1>
               <p>
-                We are well positioned to capture the growth of gaming in
-                esports, gaming marketplaces, and web3 gaming verticals
+                We are stable, long term, entertainment brand which dominates
+                the mobile gaming esports niche.
+              </p>
+              <p className={styles.quote}>
+                <span
+                  style={{
+                    color: "white",
+                    fontStyle: "normal",
+                  }}
+                >
+                  Call us{" "}
+                </span>
+                &quot;The NBA for Esports&quot;
+              </p>
+              <p>
+                We are stable, long term, entertainment brand which is well
+                positioned to capture the growth of gaming in esports, gaming
+                marketplaces, and web3 gaming verticals.
               </p>
             </div>
           </div>
