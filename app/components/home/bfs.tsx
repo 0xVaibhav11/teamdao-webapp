@@ -38,7 +38,7 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Supreme</h1>
             <p>Professional Team</p>
-            <button>submit a application</button>
+            <button>Submit a application</button>
           </div>
         </div>
         <div className={styles.card}>
@@ -52,7 +52,7 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Super</h1>
             <p>Trainee Team</p>
-            <button>try out a team</button>
+            <button>Try out a team</button>
           </div>
         </div>
         <div className={styles.card}>
@@ -66,7 +66,7 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Standard</h1>
             <p>Amature and open to all</p>
-            <button>join a team</button>
+            <button>Join a team</button>
           </div>
         </div>
       </div>
