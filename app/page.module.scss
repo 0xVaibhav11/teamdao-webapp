@@ -6,11 +6,11 @@
   height: 100vh;
   font-family: $teamdao-font;
   scroll-behavior: smooth;
-  overscroll-behavior: contain;
+  // overscroll-behavior: contain;
   overflow: scroll;
   overflow-x: hidden;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y proximity;
+  // scroll-snap-points-y: repeat(100vh);
+  // scroll-snap-type: y proximity;
 
   @include media("<=tablet") {
     height: calc(100vh + 20px);
