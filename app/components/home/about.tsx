@@ -112,7 +112,7 @@ Props) {
             <div className={styles.right}>
               <h1>TEAM DAO IS A GLOBAL ESPORTS ECOSYSTEM</h1>
               <p>
-                We are stable, long term, entertainment brand which dominates
+                We are a stable, long term, entertainment brand which dominates
                 the mobile gaming esports niche.
               </p>
               <p className={styles.quote}>
@@ -127,9 +127,8 @@ Props) {
                 &quot;The NBA for Esports&quot;
               </p>
               <p>
-                We are stable, long term, entertainment brand which is well
-                positioned to capture the growth of gaming in esports, gaming
-                marketplaces, and web3 gaming verticals.
+                We are well positioned to capture the growth of gaming in
+                esports, gaming marketplaces, and web3 gaming verticals.
               </p>
             </div>
           </div>
