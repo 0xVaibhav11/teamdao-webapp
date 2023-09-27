@@ -379,6 +379,11 @@
     justify-content: center;
     border: none;
 
+    @include media("<=phone") {
+      height: max-content;
+
+    }
+
     ::-webkit-scrollbar {
       display: none;
     }
@@ -471,6 +476,11 @@
         justify-content: center;
         background-color: green;
 
+        @include media("<=phone") {
+          height: 120vh;
+
+        }
+
         .overlay {
           position: absolute;
           top: 0;
@@ -539,11 +549,6 @@
 
             @include media("<=887px") {
               height: 100%;
-              width: auto;
-            }
-
-            @include media("<=phone") {
-              height: 80%;
               width: auto;
             }
 
@@ -637,6 +642,10 @@
             @include media("<=550px") {
               font-size: 1rem;
             }
+
+            @media screen and (max-height: 595px) {
+              line-height: 1.1;
+            }
           }
 
           >h1 {
@@ -652,6 +661,10 @@
             @include media("<=750px") {
               font-size: 8vw;
               line-height: 1;
+            }
+
+            @media screen and (max-height: 595px) {
+              padding-bottom: 1rem;
             }
           }
 
@@ -683,6 +696,10 @@
 
             @include media("<=550px") {
               font-size: 1.2rem;
+            }
+
+            @media screen and (max-height: 595px) {
+              padding-top: 1rem;
             }
           }
         }
@@ -754,19 +771,24 @@
       .crsl {
         width: 100%;
         height: 40%;
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        display: flex;
         align-self: center;
         justify-self: center;
         cursor: grab;
 
+
+        @include media("<=phone") {
+          height: fit-content;
+        }
+
         @include media("<=tablet") {
           height: 60%;
-
         }
 
         @include media("<=1200px") {
-          height: 50%;
-
+          height: 60%;
         }
 
 
@@ -783,6 +805,13 @@
           justify-content: space-evenly;
           gap: 1rem;
 
+          @include media("<=phone") {
+            height: fit-content;
+            padding: 0 3rem;
+          }
+
+
+
           .card {
             position: relative;
             height: 100%;
@@ -798,6 +827,11 @@
             display: flex;
             align-items: flex-end;
             justify-content: center;
+
+            @include media("<=phone") {
+              height: 250px;
+
+            }
 
             &::before {
               content: "";
@@ -962,6 +996,10 @@
         justify-content: center;
 
 
+        @include media("<=phone") {
+          top: 7%;
+
+        }
 
         @include media("<=tablet") {
           left: 10%;
@@ -1253,6 +1291,8 @@
     width: 100%;
     height: 25vh;
 
+
+
     @include media("<=tablet") {
       height: max-content;
       padding: 5%;
@@ -1273,6 +1313,10 @@
         flex-direction: column;
       }
 
+      @include media("<=phone") {
+        padding-bottom: 5%;
+      }
+
 
       .left {
         width: 80%;
@@ -1283,17 +1327,30 @@
         align-items: center;
         justify-content: center;
 
+        @include media("<=phone") {
+          flex-direction: column;
+        }
+
         @include media("<=tablet") {
           width: 100%;
           padding: 0;
         }
 
+
+
         .logoContainer {
           width: 50%;
+
 
           @include media("<=tablet") {
             width: max-content;
           }
+
+          @include media("<=phone") {
+            width: 100%;
+            padding-bottom: 1rem;
+          }
+
 
           >p {
             opacity: 0.6;
@@ -1301,6 +1358,10 @@
 
             @include media("<=tablet") {
               font-size: 0.7rem;
+            }
+
+            @include media("<=phone") {
+              text-align: center;
             }
           }
         }
@@ -1319,6 +1380,21 @@
             padding: 0;
             font-size: 2.5vw;
             gap: 1vw;
+          }
+
+          @include media("<=phone") {
+            flex-direction: row;
+          }
+
+          @include media("<=phone") {
+            font-size: 0.7rem;
+            width: 100%;
+            justify-content: space-between;
+          }
+
+          @include media("<=297px") {
+            font-size: 0.5rem;
+
           }
 
           >a {
