@@ -124,16 +124,15 @@ export default function OurteamSec() {
           </motion.div>
           <div className={styles.indicator}></div>
         </motion.div>
-
         <div className={styles.txts}>
           <h1>our pro teams</h1>
           <p>
-            <span>300k+ </span>
-            Follower across all players
+            <span>300K+ </span>
+            Followers across all players
           </p>
           <p>
-            <span>1500+ </span>
-            Active players in 70 contries
+            <span>1,500+ </span>
+            Active players in 70 countries
           </p>
         </div>
       </div>

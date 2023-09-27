@@ -65,7 +65,7 @@ export default function BfsSec() {
           />
           <div className={styles.txt}>
             <h1>Standard</h1>
-            <p>Amature and open to all</p>
+            <p>Amateurs and open to all</p>
             <button>Join a team</button>
           </div>
         </div>
@@ -74,13 +74,13 @@ export default function BfsSec() {
         <h1>BATTLE FOR SUPERACY (BFS)</h1>
         <h3>our ESPORTS LEAGUE</h3>
         <p>
-          <span>100+</span> Active Teams per BFS
+          <span>8</span> BFS Seasons
         </p>
         <p>
-          <span>8</span> BFS Supreme Leagues
+          <span>100+</span> Active Teams per season
         </p>
         <p>
-          <span>Weekly</span> Solo Competitions
+          <span>1,500+</span> Active Players per season
         </p>
       </div>
     </div>
