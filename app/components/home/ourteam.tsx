@@ -32,6 +32,22 @@ export default function OurteamSec() {
       txtLogo: "sand-txt.png",
     },
     {
+      id: "snad",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamsandbox.png",
+      txtLogo: "sand-txt.png",
+    },
+    {
+      id: "snad",
+      heading: "First Place",
+      desc: "For call of duty international tournament",
+      btnTxt: "more info",
+      teamLogo: "teamsandbox.png",
+      txtLogo: "sand-txt.png",
+    },
+    {
       id: "klay",
       heading: "First Place",
       desc: "For call of duty international tournament",
