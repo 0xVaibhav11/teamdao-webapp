@@ -71,7 +71,7 @@ export default function Header({ sectionInView }: { sectionInView: string }) {
             <h1>the #1 esports dao </h1>
             <p>
               Creating tournaments for 3B gamers. We are the incubator for the
-              next genenration of champions.
+              next generation of champions.
             </p>
           </div>
           <CtaBtn content="JOIN THE DAO" />
