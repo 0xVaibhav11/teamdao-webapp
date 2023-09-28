@@ -1242,7 +1242,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        gap: 2rem;
+        gap: 1.5rem;
         margin-top: 5%;
         z-index: 20;
 
@@ -1256,7 +1256,6 @@
           font-weight: 100;
           font-size: 4rem;
           line-height: 1;
-          background-color: rgba(0, 0, 0, 0.199);
 
           @include media("<=tablet") {
             font-size: 15vw;
@@ -1269,8 +1268,7 @@
           font-size: 1.3rem;
           text-align: center;
           text-wrap: balance;
-          background-color: rgba(0, 0, 0, 0.199);
-          padding: 0 1rem;
+          margin-left: 1rem;
 
           @include media("<=phone") {
             font-size: 4vw;
@@ -1280,6 +1278,7 @@
 
         .cta {
           width: auto;
+          margin-top: 1.5rem;
 
           @include media("<=phone") {
             font-size: 5vw;
