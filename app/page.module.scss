@@ -691,11 +691,11 @@
             padding: 1.5rem 0;
 
             @include media("<=phone") {
-              font-size: 6vw;
+              font-size: 7vw;
             }
 
             @include media("<=550px") {
-              font-size: 1.2rem;
+              font-size: 1.3rem;
             }
           }
         }
