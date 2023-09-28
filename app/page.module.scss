@@ -1254,6 +1254,8 @@
           font-family: $main-font;
           font-weight: 100;
           font-size: 4rem;
+          // background-color: rgba(0, 0, 0, 0.352);
+          line-height: 1;
 
           @include media("<=tablet") {
             font-size: 15vw;
@@ -1266,7 +1268,7 @@
           font-size: 1.3rem;
           text-align: center;
           text-wrap: balance;
-          text-shadow: rgb(0, 0, 0) 2px 0 10px;
+          // background-color: rgba(0, 0, 0, 0.463);
 
           @include media("<=phone") {
             font-size: 4vw;
