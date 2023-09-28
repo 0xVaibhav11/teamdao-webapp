@@ -687,7 +687,6 @@
           .quote {
             font-size: 1.7rem;
             color: $primary-color;
-            margin-bottom: 1rem;
             font-style: italic;
 
             @include media("<=phone") {
