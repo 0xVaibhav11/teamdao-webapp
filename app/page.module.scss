@@ -685,10 +685,10 @@
           }
 
           .quote {
-            font-size: 1.7rem;
+            font-size: 2rem;
             color: $primary-color;
             font-style: italic;
-            padding: 1.5rem 0;
+            padding: 0.5rem 0;
 
             @include media("<=phone") {
               font-size: 7vw;
