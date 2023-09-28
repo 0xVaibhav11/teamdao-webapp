@@ -825,7 +825,7 @@
             border: 2px solid rgba(0, 255, 0, 0.2);
             overflow: hidden;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
 
             @include media("<=phone") {
@@ -849,11 +849,11 @@
               pointer-events: none;
               user-select: none;
               width: 100%;
-              height: max-content;
+              height: 100%;
               display: flex;
               flex-direction: column;
               align-items: center;
-              justify-content: center;
+              justify-content: space-between;
               gap: 1rem;
 
               .img {
@@ -863,7 +863,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding: 0 5%;
+                margin-top: 30%;
 
                 .txtImg {
                   width: 50%;
@@ -871,7 +871,7 @@
                 }
 
                 .logoImg {
-                  width: 30%;
+                  width: 40%;
                   height: auto;
                 }
 
@@ -915,6 +915,7 @@
                 display: flex;
                 border-radius: 0.5rem;
                 align-items: center;
+                justify-self: flex-end;
                 justify-content: center;
                 height: max-content;
                 padding: 0.5rem;
