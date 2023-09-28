@@ -688,6 +688,7 @@
             font-size: 1.7rem;
             color: $primary-color;
             font-style: italic;
+            padding: 1.5rem 0;
 
             @include media("<=phone") {
               font-size: 6vw;
