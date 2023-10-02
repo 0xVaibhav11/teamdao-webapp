@@ -4,6 +4,7 @@ import styles from "../../page.module.scss";
 import ArraySubsetComponent from "../infiniteSubset";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function OurteamSec() {
   const crslData = [
@@ -24,7 +25,7 @@ export default function OurteamSec() {
       txtLogo: "algo-txt.png",
     },
     {
-      id: "snad",
+      id: "sand",
       heading: " ",
       desc: " ",
       btnTxt: "More Info",
@@ -32,7 +33,7 @@ export default function OurteamSec() {
       txtLogo: "sand-txt.png",
     },
     {
-      id: "snad",
+      id: "sand",
       heading: " ",
       desc: " ",
       btnTxt: "More Info",
@@ -40,7 +41,7 @@ export default function OurteamSec() {
       txtLogo: "sand-txt.png",
     },
     {
-      id: "snad",
+      id: "sand",
       heading: " ",
       desc: " ",
       btnTxt: "More Info",
@@ -82,7 +83,6 @@ export default function OurteamSec() {
       <div className={styles.content}>
         <motion.div ref={crslRef} className={styles.crsl}>
           <motion.div
-            whileTap={{ cursor: "grabbing" }}
             drag="x"
             dragConstraints={crslRef}
             className={styles.wrapper}
@@ -114,9 +114,11 @@ export default function OurteamSec() {
                       <h1>{item.heading}</h1>
                       <p>{item.desc}</p>
                     </div>
-                    <div className={styles.ctabtn}>
-                      <p>{item.btnTxt}</p>
-                    </div>
+                    <button className={styles.ctabtn}>
+                      <Link as={`/team/${item.id}`} href={`/team/${item.id}`}>
+                        {item.btnTxt}
+                      </Link>
+                    </button>
                   </div>
                 </div>
               );

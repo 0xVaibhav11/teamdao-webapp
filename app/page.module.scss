@@ -772,7 +772,6 @@
         display: flex;
         align-self: center;
         justify-self: center;
-        cursor: grab;
 
 
         @include media("<=phone") {
@@ -829,8 +828,8 @@
 
             }
 
-            &::before {
-              content: "";
+            .cardbg {
+              // content: "";
               width: 100%;
               height: 100%;
               position: absolute;
@@ -842,8 +841,7 @@
             }
 
             .contents {
-              pointer-events: none;
-              user-select: none;
+
               width: 100%;
               height: 100%;
               display: flex;
@@ -853,6 +851,8 @@
               gap: 1rem;
 
               .img {
+                pointer-events: none;
+                user-select: none;
                 width: 100%;
                 height: fit-content;
                 display: flex;
@@ -906,6 +906,7 @@
 
               .ctabtn {
                 overflow: hidden;
+                border: none;
                 width: 90%;
                 margin-bottom: 5%;
                 display: flex;
@@ -913,12 +914,13 @@
                 align-items: center;
                 justify-self: flex-end;
                 justify-content: center;
+                cursor: pointer;
                 height: max-content;
                 padding: 0.5rem;
                 background-color: rgba(128, 128, 128, 0.492);
                 backdrop-filter: blur(2px);
 
-                >p {
+                >a {
                   font-size: 1.2rem;
                   line-height: 1;
                   text-decoration: underline;
