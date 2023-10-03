@@ -17,7 +17,7 @@ export default function Team({ params }: { params: { id: string } }) {
     algo: {
       id: "algo",
       heading: "",
-      desc: "",
+      desc: "1st place in the MOT Call of Duty",
       btnTxt: "More Info",
       teamLogo: "teamalgo.png",
       txtLogo: "algo-txt.png",
@@ -25,7 +25,7 @@ export default function Team({ params }: { params: { id: string } }) {
     sand: {
       id: "sand",
       heading: " ",
-      desc: " ",
+      desc: "1st place in the Ronin Esports First Anniversary Tournament (March 2023)",
       btnTxt: "More Info",
       teamLogo: "teamsandbox.png",
       txtLogo: "sand-txt.png",
@@ -33,7 +33,7 @@ export default function Team({ params }: { params: { id: string } }) {
     klay: {
       id: "klay",
       heading: " ",
-      desc: " ",
+      desc: "1st Place in the Ronin Esports First Anniversary Tournament (March 2023)",
       btnTxt: "More Info",
       teamLogo: "teamklay.png",
       txtLogo: "klay-txt.png",
@@ -55,29 +55,50 @@ export default function Team({ params }: { params: { id: string } }) {
   return (
     <>
       <div className={styles.main}>
-        <div className={styles.bg} />
-        <h1>{`${params.id} = ${teamData?.id}`}</h1>
-        <div className={styles.teamLogo}>
+        <div className={styles.bg}>
           <Image
-            className={styles.logoImg}
-            src={`/Images/${teamData?.teamLogo}`}
-            alt="bg"
-            width={100}
-            height={100}
+            className={styles.bgImg}
+            src={"/Images/teamup-bg.png"}
+            alt="header bg"
+            width={"2000"}
+            height={"2000"}
+            blurDataURL="/ImgBlur/teamup-bg-small.png"
+            loading="lazy"
+          />
+
+          <Image
+            className={styles.foreground}
+            src={"/Images/some-chars.png"}
+            alt="foreground bg"
+            width={"4120"}
+            height={"1440"}
             priority
           />
         </div>
-        <div className={styles.txtLogo}>
-          <Image
-            className={styles.txtImg}
-            src={`/Images/${teamData?.txtLogo}`}
-            alt="bg"
-            width={100}
-            height={100}
-            priority
-          />
+
+        <div className={styles.content}>
+          <div className={styles.logo}>
+            <Image
+              className={styles.logoImg}
+              src={`/Images/${teamData?.teamLogo}`}
+              alt="bg"
+              width={1000}
+              height={1000}
+              priority
+            />
+            <Image
+              className={styles.txtImg}
+              src={`/Images/${teamData?.txtLogo}`}
+              alt="bg"
+              width={1000}
+              height={1000}
+              priority
+            />
+          </div>
+          <div className={styles.txts}>
+            <p>{teamData?.desc}</p>
+          </div>
         </div>
-        <div className={styles.txts}></div>
       </div>
     </>
   );
