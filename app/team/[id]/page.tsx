@@ -10,7 +10,7 @@ export default function Team({ params }: { params: { id: string } }) {
   interface TeamProps {
     id: String;
     heading: String;
-    desc: String;
+    desc: Array<String>;
     btnTxt: String;
     teamLogo: String;
     txtLogo: String;
@@ -20,7 +20,7 @@ export default function Team({ params }: { params: { id: string } }) {
     algo: {
       id: "algo",
       heading: "",
-      desc: "1st place in the MOT Call of Duty International Tournament",
+      desc: ["1st place in the MOT Call of Duty International Tournament"],
       btnTxt: "More Info",
       teamLogo: "teamalgo.png",
       txtLogo: "algo-txt.png",
@@ -28,7 +28,9 @@ export default function Team({ params }: { params: { id: string } }) {
     sand: {
       id: "sand",
       heading: " ",
-      desc: "1st place in the Ronin Esports First Anniversary Tournament (March 2023)",
+      desc: [
+        "1st place in the Ronin Esports First Anniversary Tournament (March 2023)",
+      ],
       btnTxt: "More Info",
       teamLogo: "teamsandbox.png",
       txtLogo: "sand-txt.png",
@@ -36,7 +38,9 @@ export default function Team({ params }: { params: { id: string } }) {
     klay: {
       id: "klay",
       heading: " ",
-      desc: "1st Place in the Ronin Esports First Anniversary Tournament (March 2023)",
+      desc: [
+        "1st Place in the Ronin Esports First Anniversary Tournament (March 2023)",
+      ],
       btnTxt: "More Info",
       teamLogo: "teamklay.png",
       txtLogo: "klay-txt.png",
@@ -44,7 +48,13 @@ export default function Team({ params }: { params: { id: string } }) {
     calix: {
       id: "calix",
       heading: "Calix",
-      desc: "lol notfound",
+      desc: [
+        "#1 Team in India",
+        "#1 CODM Team in India",
+        "1st Place in Google CODM BR Championship",
+        "1st Place in NHK Winter Royale",
+        "Fan fav team with most influential players",
+      ],
       btnTxt: "More Info",
       teamLogo: "teamcalix.png",
       txtLogo: "",
@@ -52,7 +62,10 @@ export default function Team({ params }: { params: { id: string } }) {
     gryffin: {
       id: "gryffin",
       heading: "Gryffin",
-      desc: "lol not found",
+      desc: [
+        "Prize winning on track to reach $50k+ (team formed in Q4 2022)",
+        "1st Place in FIKSI Warmadewa University Cup, LPD League, Khe Entertainment Cup, Exhibition Esports tournaments, Infobank Tournaments",
+      ],
       btnTxt: "More Info",
       teamLogo: "teamgryffin.png",
       txtLogo: "",
@@ -107,8 +120,8 @@ export default function Team({ params }: { params: { id: string } }) {
               className={styles.logoImg}
               src={`/Images/${teamData?.teamLogo}`}
               alt="bg"
-              width={1000}
-              height={1000}
+              width={10000}
+              height={10000}
               priority
             />
             {teamData?.txtLogo !== "" ? (
@@ -116,8 +129,8 @@ export default function Team({ params }: { params: { id: string } }) {
                 className={styles.txtImg}
                 src={`/Images/${teamData?.txtLogo}`}
                 alt="bg"
-                width={100}
-                height={100}
+                width={10000}
+                height={10000}
                 priority
               />
             ) : (
@@ -127,7 +140,9 @@ export default function Team({ params }: { params: { id: string } }) {
             )}
           </div>
           <div className={styles.txts}>
-            <p>{teamData?.desc}</p>
+            {teamData?.desc.map((item, i) => {
+              return <p key={`key-${i}`}>{item}</p>;
+            })}
           </div>
         </div>
       </div>

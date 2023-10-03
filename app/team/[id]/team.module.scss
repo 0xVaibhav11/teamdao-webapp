@@ -44,6 +44,16 @@
         .txts {
             font-size: 2rem;
             text-align: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1rem;
+
+            >p {
+                line-height: 1;
+            }
         }
 
 
