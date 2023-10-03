@@ -17,30 +17,6 @@ export default function OurteamSec() {
       txtLogo: "algo-txt.png",
     },
     {
-      id: "algo",
-      heading: "",
-      desc: "",
-      btnTxt: "More Info",
-      teamLogo: "teamalgo.png",
-      txtLogo: "algo-txt.png",
-    },
-    {
-      id: "sand",
-      heading: " ",
-      desc: " ",
-      btnTxt: "More Info",
-      teamLogo: "teamsandbox.png",
-      txtLogo: "sand-txt.png",
-    },
-    {
-      id: "sand",
-      heading: " ",
-      desc: " ",
-      btnTxt: "More Info",
-      teamLogo: "teamsandbox.png",
-      txtLogo: "sand-txt.png",
-    },
-    {
       id: "sand",
       heading: " ",
       desc: " ",
@@ -57,12 +33,20 @@ export default function OurteamSec() {
       txtLogo: "klay-txt.png",
     },
     {
-      id: "klay",
-      heading: " ",
+      id: "calix",
+      heading: "Calix",
       desc: " ",
       btnTxt: "More Info",
-      teamLogo: "teamklay.png",
-      txtLogo: "klay-txt.png",
+      teamLogo: "teamcalix.png",
+      txtLogo: "",
+    },
+    {
+      id: "gryffin",
+      heading: "Gryffin",
+      desc: " ",
+      btnTxt: "More Info",
+      teamLogo: "teamgryffin.png",
+      txtLogo: "",
     },
   ];
 
@@ -101,18 +85,20 @@ export default function OurteamSec() {
                         height={100}
                         priority
                       />
-                      <Image
-                        className={styles.txtImg}
-                        src={`/Images/${item.txtLogo}`}
-                        alt="bg"
-                        width={100}
-                        height={100}
-                        priority
-                      />
-                    </div>
-                    <div className={styles.cardtxt}>
-                      <h1>{item.heading}</h1>
-                      <p>{item.desc}</p>
+                      {item.txtLogo !== "" ? (
+                        <Image
+                          className={styles.txtImg}
+                          src={`/Images/${item.txtLogo}`}
+                          alt="bg"
+                          width={100}
+                          height={100}
+                          priority
+                        />
+                      ) : (
+                        <p>
+                          <span>T.E.A.M</span> {item.heading}
+                        </p>
+                      )}
                     </div>
                     <button className={styles.ctabtn}>
                       <Link as={`/team/${item.id}`} href={`/team/${item.id}`}>

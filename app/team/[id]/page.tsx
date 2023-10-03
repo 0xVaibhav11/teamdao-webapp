@@ -2,8 +2,11 @@
 import { useEffect, useState } from "react";
 import styles from "./team.module.scss";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Team({ params }: { params: { id: string } }) {
+  const router = useRouter();
+
   interface TeamProps {
     id: String;
     heading: String;
@@ -17,7 +20,7 @@ export default function Team({ params }: { params: { id: string } }) {
     algo: {
       id: "algo",
       heading: "",
-      desc: "1st place in the MOT Call of Duty",
+      desc: "1st place in the MOT Call of Duty International Tournament",
       btnTxt: "More Info",
       teamLogo: "teamalgo.png",
       txtLogo: "algo-txt.png",
@@ -38,6 +41,22 @@ export default function Team({ params }: { params: { id: string } }) {
       teamLogo: "teamklay.png",
       txtLogo: "klay-txt.png",
     },
+    calix: {
+      id: "calix",
+      heading: "Calix",
+      desc: "lol notfound",
+      btnTxt: "More Info",
+      teamLogo: "teamcalix.png",
+      txtLogo: "",
+    },
+    gryffin: {
+      id: "gryffin",
+      heading: "Gryffin",
+      desc: "lol not found",
+      btnTxt: "More Info",
+      teamLogo: "teamgryffin.png",
+      txtLogo: "",
+    },
   };
 
   const [teamData, setTeamData] = useState<TeamProps>();
@@ -49,6 +68,12 @@ export default function Team({ params }: { params: { id: string } }) {
       setTeamData(team.sand);
     } else if (params.id === "klay") {
       setTeamData(team.klay);
+    } else if (params.id === "calix") {
+      setTeamData(team.calix);
+    } else if (params.id === "gryffin") {
+      setTeamData(team.gryffin);
+    } else {
+      router.replace("/404");
     }
   }, []);
 
@@ -86,14 +111,20 @@ export default function Team({ params }: { params: { id: string } }) {
               height={1000}
               priority
             />
-            <Image
-              className={styles.txtImg}
-              src={`/Images/${teamData?.txtLogo}`}
-              alt="bg"
-              width={1000}
-              height={1000}
-              priority
-            />
+            {teamData?.txtLogo !== "" ? (
+              <Image
+                className={styles.txtImg}
+                src={`/Images/${teamData?.txtLogo}`}
+                alt="bg"
+                width={100}
+                height={100}
+                priority
+              />
+            ) : (
+              <p>
+                <span>T.E.A.M</span> {teamData?.heading}
+              </p>
+            )}
           </div>
           <div className={styles.txts}>
             <p>{teamData?.desc}</p>

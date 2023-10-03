@@ -798,7 +798,7 @@
           padding: 3rem;
           align-items: center;
           justify-content: space-evenly;
-          gap: 1rem;
+          gap: 3rem;
 
           @include media("<=phone") {
             height: fit-content;
@@ -869,6 +869,26 @@
                 .logoImg {
                   width: 40%;
                   height: auto;
+                }
+
+                >p {
+                  padding-top: 0.6rem;
+                  text-align: center;
+                  text-wrap: balance;
+                  font-size: 1.2rem;
+                  line-height: 1;
+
+
+
+                  @include media("<=phone") {
+                    font-size: 4vw;
+
+                  }
+
+                  @include media("<=990px") {
+                    font-size: 1rem;
+
+                  }
                 }
 
 
