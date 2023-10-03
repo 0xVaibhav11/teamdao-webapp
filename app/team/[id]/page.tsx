@@ -51,7 +51,7 @@ export default function Team({ params }: { params: { id: string } }) {
       desc: [
         "#1 Team in India",
         "#1 CODM Team in India",
-        "1st Place in Google CODM BR Championship",
+        "1st Place in Googly CODM BR Championship",
         "1st Place in NHK Winter Royale",
         "Fan fav team with most influential players",
       ],
