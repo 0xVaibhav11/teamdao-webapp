@@ -36,7 +36,7 @@ export default function BfsSec() {
             priority
           />
           <div className={styles.txt}>
-            <h1>Supreme</h1>
+            <h1>Supremacy</h1>
             <p>Professional Team</p>
             <button>Submit a application</button>
           </div>
