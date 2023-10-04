@@ -71,7 +71,7 @@ export default function BfsSec() {
         </div>
       </div>
       <div ref={scope} className={styles.foregroundBfs}>
-        <h1>BATTLE FOR SUPEREMACY(BFS)</h1>
+        <h1>BATTLE FOR SUPREMACY(BFS)</h1>
         <h3>our ESPORTS LEAGUE</h3>
         <p>
           <span>8</span> BFS Seasons
