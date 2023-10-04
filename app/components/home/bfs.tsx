@@ -36,7 +36,7 @@ export default function BfsSec() {
             priority
           />
           <div className={styles.txt}>
-            <h1>Supremacy</h1>
+            <h1>Supreme</h1>
             <p>Professional Team</p>
             <button>Submit a application</button>
           </div>
@@ -71,7 +71,7 @@ export default function BfsSec() {
         </div>
       </div>
       <div ref={scope} className={styles.foregroundBfs}>
-        <h1>BATTLE FOR SUPERACY (BFS)</h1>
+        <h1>BATTLE FOR SUPEREMACY(BFS)</h1>
         <h3>our ESPORTS LEAGUE</h3>
         <p>
           <span>8</span> BFS Seasons
