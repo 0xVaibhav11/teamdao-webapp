@@ -4,10 +4,12 @@ import styles from "../../page.module.scss";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
+import Link from "next/link";
 
 export default function BfsSec() {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: true });
+  const [hover, setHover] = useState<string>("");
 
   useEffect(() => {
     animate("h1", { x: -75, opacity: 0 });
@@ -23,6 +25,7 @@ export default function BfsSec() {
       );
     }
   }, [isInView]);
+
   return (
     <div className={styles.container}>
       <div className={styles.bfsbg}>
@@ -38,7 +41,36 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Supreme</h1>
             <p>Professional Team</p>
-            <button>Submit a application</button>
+            <Link
+              target="_blank"
+              href={"https://t.me/BFSalphaBot"}
+              className={styles.button}
+            >
+              Submit a application
+              {hover === "supreme" ? (
+                <div className={styles.onHover}>
+                  <Image
+                    src={"/Images/Supreme.png"}
+                    alt="bg"
+                    width={479 / 2}
+                    height={748 / 2}
+                    priority
+                  />
+                </div>
+              ) : null}
+              <div
+                role="button"
+                onMouseEnter={() => {
+                  setHover("supreme");
+                }}
+                onMouseLeave={() => {
+                  setHover("");
+                }}
+                className={styles.info}
+              >
+                i
+              </div>
+            </Link>
           </div>
         </div>
         <div className={styles.card}>
@@ -52,7 +84,36 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Super</h1>
             <p>Trainee Team</p>
-            <button>Try out a team</button>
+            <Link
+              target="_blank"
+              href={"https://t.me/BFSalphaBot"}
+              className={styles.button}
+            >
+              Try out a team
+              {hover === "super" ? (
+                <div className={styles.onHover}>
+                  <Image
+                    src={"/Images/Super.png"}
+                    alt="bg"
+                    width={487 / 2}
+                    height={167 / 2}
+                    priority
+                  />
+                </div>
+              ) : null}
+              <div
+                role="button"
+                onMouseEnter={() => {
+                  setHover("super");
+                }}
+                onMouseLeave={() => {
+                  setHover("");
+                }}
+                className={styles.info}
+              >
+                i
+              </div>
+            </Link>
           </div>
         </div>
         <div className={styles.card}>
@@ -66,7 +127,36 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Standard</h1>
             <p>Amateurs and open to all</p>
-            <button>Join a team</button>
+            <Link
+              target="_blank"
+              href={"https://t.me/BFSalphaBot"}
+              className={styles.button}
+            >
+              Join a team
+              {hover === "standard" ? (
+                <div className={styles.onHover}>
+                  <Image
+                    src={"/Images/Standard.png"}
+                    alt="bg"
+                    width={488 / 2}
+                    height={146 / 2}
+                    priority
+                  />
+                </div>
+              ) : null}
+              <div
+                role="button"
+                onMouseEnter={() => {
+                  setHover("standard");
+                }}
+                onMouseLeave={() => {
+                  setHover("");
+                }}
+                className={styles.info}
+              >
+                i
+              </div>
+            </Link>
           </div>
         </div>
       </div>
