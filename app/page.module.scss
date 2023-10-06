@@ -1276,6 +1276,10 @@
                 color: white;
                 border: white solid 2px;
 
+                @include media("<=phone") {
+                  display: none;
+                }
+
               }
             }
           }
