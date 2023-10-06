@@ -785,6 +785,10 @@
           font-family: $main-font;
           color: $primary-color;
           letter-spacing: 1px;
+
+          @include media("<=tablet") {
+            font-size: 1.7rem;
+          }
         }
 
 
@@ -797,6 +801,10 @@
           justify-content: center;
           flex-direction: column;
           gap: 1rem;
+
+          @include media("<=tablet") {
+            font-size: 1.3rem;
+          }
 
           >p {
             line-height: 1;
