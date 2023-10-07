@@ -13,31 +13,41 @@ const teamDaoFont = Roboto({
   subsets: ["latin"],
   variable: "--teamdao-typeface",
 });
-// const teamDaoFont = localFont({
-//   src: [
-//     {
-//       path: "./Fonts/Technology.ttf",
-//       weight: "400",
-//       style: "normal",
-//     },
-//     {
-//       path: "./Fonts/Technology-Italic.ttf",
-//       weight: "400",
-//       style: "italic",
-//     },
-//     {
-//       path: "./Fonts/Technology-Bold.ttf",
-//       weight: "700",
-//       style: "normal",
-//     },
-//     {
-//       path: "./Fonts/Technology-BoldItalic.ttf",
-//       weight: "700",
-//       style: "italic",
-//     },
-//   ],
-//   variable: "--teamdao-typeface",
-// });
+const calculator = localFont({
+  src: [
+    {
+      path: "./Fonts/Technology.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./Fonts/Technology-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./Fonts/Technology-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./Fonts/Technology-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--calc-typeface",
+});
+const calix = localFont({
+  src: [
+    {
+      path: "./Fonts/BankGothic.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--calix-typeface",
+});
 
 export const metadata: Metadata = {
   title: "T.E.A.M DAO",
@@ -53,7 +63,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning={true}
-        className={`${bebasNeue.variable} ${teamDaoFont.variable}`}
+        className={`${bebasNeue.variable} ${teamDaoFont.variable} ${calix.variable} ${calculator.variable}`}
       >
         {children}
       </body>

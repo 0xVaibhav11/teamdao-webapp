@@ -42,3 +42,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.gryffin {
+  font-family: $main-font;
+}
+
+.calix {
+  font-family: $calix;
+  margin-left: -1px;
+  line-height: 1;
+}

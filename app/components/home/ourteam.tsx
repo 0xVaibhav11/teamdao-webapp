@@ -204,7 +204,10 @@ export default function OurteamSec() {
                         />
                       ) : (
                         <p>
-                          <span>T.E.A.M</span> {item.heading}
+                          T.E.A.M{" "}
+                          <span className={`${item.id}`}>
+                            {item.heading.toLocaleUpperCase()}
+                          </span>
                         </p>
                       )}
                     </div>

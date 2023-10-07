@@ -935,8 +935,9 @@
                   padding-top: 0.6rem;
                   text-align: center;
                   text-wrap: balance;
-                  font-size: 1.2rem;
+                  font-size: 1.3rem;
                   line-height: 1;
+                  font-family: $calculator;
 
 
 
@@ -1003,7 +1004,6 @@
                 >a {
                   font-size: 1.2rem;
                   line-height: 1;
-                  text-decoration: underline;
 
                   @include media("<=phone") {
                     font-size: 5vw;
