@@ -1233,6 +1233,7 @@
               backdrop-filter: blur(2px);
               border-radius: 5px;
               padding: 2% 5%;
+              padding-right: calc(5% + 0.5rem);
               border: none;
               font-weight: bold;
 
@@ -1272,8 +1273,8 @@
 
               .info {
                 position: absolute;
-                top: 25%;
-                right: 2%;
+                top: 50%;
+                right: 0.5rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1284,6 +1285,7 @@
                 font-size: 0.8rem;
                 color: white;
                 border: white solid 2px;
+                transform: translateY(-50%);
 
                 @include media("<=phone") {
                   display: none;

@@ -46,7 +46,7 @@ export default function BfsSec() {
               href={"https://t.me/BFSalphaBot"}
               className={styles.button}
             >
-              Submit a application
+              Submit an application
               {hover === "supreme" ? (
                 <div className={styles.onHover}>
                   <Image

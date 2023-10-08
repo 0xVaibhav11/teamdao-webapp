@@ -94,7 +94,7 @@ export default function OurteamSec() {
       id: "calix",
       heading: "Calix",
       desc: [
-        "#1 Team in India",
+        // "#1 Team in India",
         "#1 CODM Team in India",
         "1st Place in Googly CODM BR Championship",
         "1st Place in NHK Winter Royale",
