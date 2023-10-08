@@ -1255,10 +1255,11 @@
               .onHover {
                 position: absolute;
                 top: -1;
-                right: -1;
+                left: 0;
                 width: max-content;
                 height: max-content;
                 background-color: transparent;
+
               }
 
               .info {
@@ -1281,6 +1282,30 @@
                 }
 
               }
+
+
+            }
+
+            .infoMobile {
+              display: none;
+
+              @include media("<=phone") {
+                display: block;
+                position: absolute;
+                top: 110%;
+                right: 2%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 0.8rem;
+                opacity: 0.6;
+                aspect-ratio: 1;
+                border-radius: 999px;
+                font-size: 0.4rem;
+                color: white;
+                border: white solid 2px;
+              }
+
             }
           }
         }

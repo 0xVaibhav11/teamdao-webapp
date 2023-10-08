@@ -71,6 +71,18 @@ export default function BfsSec() {
                 i
               </div>
             </Link>
+            <div
+              role="button"
+              onTouchStart={() => {
+                setHover("supreme");
+              }}
+              onTouchEnd={() => {
+                setHover("");
+              }}
+              className={styles.infoMobile}
+            >
+              i
+            </div>
           </div>
         </div>
         <div className={styles.card}>
@@ -93,6 +105,7 @@ export default function BfsSec() {
               {hover === "super" ? (
                 <div className={styles.onHover}>
                   <Image
+                    className={styles.hoverimg}
                     src={"/Images/Super.png"}
                     alt="bg"
                     width={487 / 2}
@@ -114,6 +127,18 @@ export default function BfsSec() {
                 i
               </div>
             </Link>
+            <div
+              role="button"
+              onTouchStart={() => {
+                setHover("super");
+              }}
+              onTouchEnd={() => {
+                setHover("");
+              }}
+              className={styles.infoMobile}
+            >
+              i
+            </div>
           </div>
         </div>
         <div className={styles.card}>
@@ -157,6 +182,18 @@ export default function BfsSec() {
                 i
               </div>
             </Link>
+            <div
+              role="button"
+              onTouchStart={() => {
+                setHover("standard");
+              }}
+              onTouchEnd={() => {
+                setHover("");
+              }}
+              className={styles.infoMobile}
+            >
+              i
+            </div>
           </div>
         </div>
       </div>
