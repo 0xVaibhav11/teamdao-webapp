@@ -1260,6 +1260,10 @@
                 height: max-content;
                 background-color: transparent;
 
+                >img {
+                  scale: 0.7;
+                }
+
               }
 
               .info {
