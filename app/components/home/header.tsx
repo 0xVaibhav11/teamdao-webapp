@@ -49,10 +49,10 @@ export default function Header({ sectionInView }: { sectionInView: string }) {
               active={sectionInView === "our-team" ? true : false}
               href="#our-team"
             >
-              GAMES/ESPORTS TEAM
+              PLAYERS
             </Tabs>
             <Tabs active={sectionInView === "bfs" ? true : false} href="#bfs">
-              BFS LEAGUE
+              COMPETE
             </Tabs>
           </div>
         </div>
