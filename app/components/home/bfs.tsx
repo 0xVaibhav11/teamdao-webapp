@@ -95,7 +95,7 @@ export default function BfsSec() {
           />
           <div className={styles.txt}>
             <h1>Super</h1>
-            <p>Trainee Team</p>
+            <p>Competition Ready</p>
             <Link
               target="_blank"
               href={"https://t.me/BFSalphaBot"}
@@ -151,7 +151,7 @@ export default function BfsSec() {
           />
           <div className={styles.txt}>
             <h1>Standard</h1>
-            <p>Amateurs and open to all</p>
+            <p>Open to all</p>
             <Link
               target="_blank"
               href={"https://t.me/BFSalphaBot"}

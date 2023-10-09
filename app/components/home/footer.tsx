@@ -11,10 +11,10 @@ export default function Footer() {
       <div className={styles.left}>
         <div className={styles.logoContainer}>
           <Logo />
-          <p>
+          {/* <p>
             Jl. Pengubengan Kauh No.78, Kerobokan Kelod, Kec. Kuta Utara,
             Kabupaten Badung, Bali 80361, Indonesia
-          </p>
+          </p> */}
         </div>
         <div className={styles.links}>
           <a href="#top">HOME</a>
