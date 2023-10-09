@@ -46,7 +46,7 @@ export default function BfsSec() {
               href={"https://t.me/BFSalphaBot"}
               className={styles.button}
             >
-              Submit an application
+              Apply Now
               {hover === "supreme" ? (
                 <div className={styles.onHover}>
                   <Image
@@ -101,7 +101,7 @@ export default function BfsSec() {
               href={"https://t.me/BFSalphaBot"}
               className={styles.button}
             >
-              Try out a team
+              Play Now
               {hover === "super" ? (
                 <div className={styles.onHover}>
                   <Image
