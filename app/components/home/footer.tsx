@@ -4,6 +4,7 @@ import styles from "../../page.module.scss";
 import Logo from "../logo";
 import Tabs from "../navTabs";
 import CtaBtn from "../ctabtn";
+import { FaSquareXTwitter, FaSquareInstagram } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -15,8 +16,10 @@ export default function Footer() {
             Jl. Pengubengan Kauh No.78, Kerobokan Kelod, Kec. Kuta Utara,
             Kabupaten Badung, Bali 80361, Indonesia
           </p> */}
-          <a>twitter_icon</a>
-          <a>instagram_icon</a>
+          <div className={styles.socials}>
+            <FaSquareXTwitter />
+            <FaSquareInstagram />
+          </div>
         </div>
         <div className={styles.links}>
           <a href="#top">HOME</a>

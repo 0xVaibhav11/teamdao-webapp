@@ -1229,7 +1229,7 @@
               display: flex;
               align-items: center;
               justify-content: flex-start;
-              gap: 1rem;
+              gap: 0.5rem;
 
               .button {
                 font-family: $teamdao-font;
@@ -1475,13 +1475,12 @@
 
 
       .left {
-        width: 80%;
+        min-width: 80%;
         height: 100%;
-        padding-left: 5%;
-        padding-right: 10%;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-grow: 1;
 
         @include media("<=phone") {
           flex-direction: column;
@@ -1495,7 +1494,43 @@
 
 
         .logoContainer {
-          width: 50%;
+          width: max-content;
+          display: flex;
+          flex-direction: column;
+          font-size: 1.5rem;
+          margin-right: 3%;
+          padding-left: 2%;
+
+
+          >img {
+            width: 10rem;
+
+            @include media(">=770px",
+              "<850px") {
+              width: 7rem;
+
+            }
+          }
+
+          .socials {
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+            font-size: 1.7rem;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 1rem;
+
+            >svg {
+              opacity: 0.6;
+
+              &:hover {
+                opacity: 1;
+                scale: 1.1;
+                transition: all 150ms ease-out;
+              }
+            }
+          }
 
 
           @include media("<=tablet") {
@@ -1523,11 +1558,10 @@
         }
 
         .links {
-          padding-top: 5%;
           width: 80%;
           height: 100%;
           display: flex;
-          align-items: flex-start;
+          align-items: center;
           justify-content: space-evenly;
 
           @include media("<=tablet") {
@@ -1546,6 +1580,7 @@
             font-size: 0.7rem;
             width: 100%;
             justify-content: space-between;
+            flex-wrap: wrap;
           }
 
           @include media("<=297px") {
@@ -1566,7 +1601,7 @@
       }
 
       .right {
-        width: 20%;
+        padding-right: 2%;
         height: 100%;
         display: flex;
         align-items: center;
