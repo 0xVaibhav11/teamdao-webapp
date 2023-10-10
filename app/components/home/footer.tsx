@@ -24,8 +24,8 @@ export default function Footer() {
         <div className={styles.links}>
           <a href="#top">HOME</a>
           <a href="#about">ABOUT</a>
-          <a href="#our-team">GAMES/ESPORTS TEAM</a>
-          <a href="#bfs">BFS LEAGUE</a>
+          <a href="#our-team">PLAYERS</a>
+          <a href="#bfs">COMPETE</a>
           <a href="">WHITEPAPER</a>
         </div>
       </div>
