@@ -54,6 +54,9 @@ export default function Header({ sectionInView }: { sectionInView: string }) {
             <Tabs active={sectionInView === "bfs" ? true : false} href="#bfs">
               COMPETE
             </Tabs>
+            <Tabs active={false} href="">
+              WHITEPAPER
+            </Tabs>
           </div>
         </div>
         <CtaBtn content={"JOIN THE DAO"} />

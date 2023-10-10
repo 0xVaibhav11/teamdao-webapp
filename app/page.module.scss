@@ -1223,58 +1223,67 @@
               }
             }
 
-            .button {
+            .btnWrap {
+              width: 100%;
+              height: auto;
+              display: flex;
+              align-items: center;
+              justify-content: flex-start;
+              gap: 1rem;
 
-              font-family: $teamdao-font;
-              font-size: 1.3rem;
-              letter-spacing: 1px;
-              width: fit-content;
-              background-color: rgba(255, 255, 255, 0.1);
-              backdrop-filter: blur(2px);
-              border-radius: 5px;
-              padding: 2% 5%;
-              padding-right: calc(5% + 0.5rem);
-              border: none;
-              font-weight: bold;
+              .button {
+                font-family: $teamdao-font;
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+                width: fit-content;
+                background-color: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(2px);
+                border-radius: 5px;
+                padding: 2% 5%;
+                padding-right: calc(5% + 0.5rem);
+                border: none;
+                font-weight: bold;
 
-              @include media("<=tablet") {
-                font-size: 1rem;
-                padding: 2% 10%;
-
-              }
-
-              @include media("<=phone") {
-                font-size: 3vw;
-
-              }
-
-              &:hover {
-                cursor: pointer;
-                background-color: rgba(255, 255, 255, 0.218);
-              }
-
-              .onHover {
-                position: absolute;
-                top: -1;
-                left: 0;
-                width: max-content;
-                height: max-content;
-                background-color: transparent;
-
-                @include media("<=phone") {
-                  >img {
-                    scale: 0.7;
-                  }
+                @include media("<=tablet") {
+                  font-size: 1rem;
+                  padding: 2% 10%;
 
                 }
+
+                @include media("<=phone") {
+                  font-size: 3vw;
+
+                }
+
+                &:hover {
+                  cursor: pointer;
+                  background-color: rgba(255, 255, 255, 0.218);
+                }
+
+                .onHover {
+                  position: absolute;
+                  top: -1;
+                  left: 0;
+                  width: max-content;
+                  height: max-content;
+                  background-color: transparent;
+
+                  @include media("<=phone") {
+                    >img {
+                      scale: 0.7;
+                    }
+
+                  }
+
+
+                }
+
+
 
 
               }
 
               .info {
-                position: absolute;
-                top: 50%;
-                right: 0.5rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1285,16 +1294,14 @@
                 font-size: 0.8rem;
                 color: white;
                 border: white solid 2px;
-                transform: translateY(-50%);
 
                 @include media("<=phone") {
                   display: none;
                 }
 
               }
-
-
             }
+
 
             .infoMobile {
               display: none;

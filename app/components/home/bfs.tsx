@@ -41,23 +41,25 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Supreme</h1>
             <p>Professional Team</p>
-            <Link
-              target="_blank"
-              href={"https://t.me/BFSalphaBot"}
-              className={styles.button}
-            >
-              Apply Now
-              {hover === "supreme" ? (
-                <div className={styles.onHover}>
-                  <Image
-                    src={"/Images/Supreme.png"}
-                    alt="bg"
-                    width={479 / 2}
-                    height={748 / 2}
-                    priority
-                  />
-                </div>
-              ) : null}
+            <div className={styles.btnWrap}>
+              <Link
+                target="_blank"
+                href={"https://t.me/BFSalphaBot"}
+                className={styles.button}
+              >
+                Apply Now
+                {hover === "supreme" ? (
+                  <div className={styles.onHover}>
+                    <Image
+                      src={"/Images/Supreme.png"}
+                      alt="bg"
+                      width={479 / 2}
+                      height={748 / 2}
+                      priority
+                    />
+                  </div>
+                ) : null}
+              </Link>
               <div
                 role="button"
                 onMouseEnter={() => {
@@ -70,7 +72,7 @@ export default function BfsSec() {
               >
                 i
               </div>
-            </Link>
+            </div>
             <div
               role="button"
               onTouchStart={() => {
@@ -96,24 +98,26 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Super</h1>
             <p>Competition Ready</p>
-            <Link
-              target="_blank"
-              href={"https://t.me/BFSalphaBot"}
-              className={styles.button}
-            >
-              Play Now
-              {hover === "super" ? (
-                <div className={styles.onHover}>
-                  <Image
-                    className={styles.hoverimg}
-                    src={"/Images/Super.png"}
-                    alt="bg"
-                    width={487 / 2}
-                    height={167 / 2}
-                    priority
-                  />
-                </div>
-              ) : null}
+            <div className={styles.btnWrap}>
+              <Link
+                target="_blank"
+                href={"https://t.me/BFSalphaBot"}
+                className={styles.button}
+              >
+                Play Now
+                {hover === "super" ? (
+                  <div className={styles.onHover}>
+                    <Image
+                      className={styles.hoverimg}
+                      src={"/Images/Super.png"}
+                      alt="bg"
+                      width={487 / 2}
+                      height={167 / 2}
+                      priority
+                    />
+                  </div>
+                ) : null}
+              </Link>
               <div
                 role="button"
                 onMouseEnter={() => {
@@ -126,7 +130,7 @@ export default function BfsSec() {
               >
                 i
               </div>
-            </Link>
+            </div>
             <div
               role="button"
               onTouchStart={() => {
@@ -152,24 +156,29 @@ export default function BfsSec() {
           <div className={styles.txt}>
             <h1>Standard</h1>
             <p>Open to all</p>
-            <Link
-              target="_blank"
-              href={"https://t.me/BFSalphaBot"}
-              className={styles.button}
-            >
-              Join a team
-              {hover === "standard" ? (
-                <div className={styles.onHover}>
-                  <Image
-                    src={"/Images/Standard.png"}
-                    alt="bg"
-                    width={488 / 2}
-                    height={146 / 2}
-                    priority
-                  />
-                </div>
-              ) : null}
+            <div className={styles.btnWrap}>
+              <Link
+                target="_blank"
+                href={"https://t.me/BFSalphaBot"}
+                className={styles.button}
+              >
+                Join a team
+                {hover === "standard" ? (
+                  <div className={styles.onHover}>
+                    <Image
+                      src={"/Images/Standard.png"}
+                      alt="bg"
+                      width={488 / 2}
+                      height={146 / 2}
+                      priority
+                    />
+                  </div>
+                ) : null}
+              </Link>
               <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
                 role="button"
                 onMouseEnter={() => {
                   setHover("standard");
@@ -181,7 +190,7 @@ export default function BfsSec() {
               >
                 i
               </div>
-            </Link>
+            </div>
             <div
               role="button"
               onTouchStart={() => {
