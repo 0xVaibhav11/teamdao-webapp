@@ -213,10 +213,10 @@ export default function BfsSec() {
           <span>8</span> BFS Seasons
         </p>
         <p>
-          <span>100+</span> Active Teams per season
+          <span>100+</span> Active teams per season
         </p>
         <p>
-          <span>1,500+</span> Active Players per season
+          <span>1,500+</span> Active players per season
         </p>
       </div>
     </div>
