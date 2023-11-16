@@ -5,6 +5,7 @@ import Logo from "../logo";
 import Tabs from "../navTabs";
 import CtaBtn from "../ctabtn";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -17,8 +18,12 @@ export default function Footer() {
             Kabupaten Badung, Bali 80361, Indonesia
           </p> */}
           <div className={styles.socials}>
-            <FaXTwitter />
-            <FaInstagram />
+            <Link href={"https://x.com/teamdaocom?s=21"} target="_blank">
+            <FaXTwitter className={styles.svg} />
+            </Link>
+            <Link href={"https://instagram.com/teamdaoid?igshid=OGQ5ZDc2ODk2ZA=="} target="_blank">
+            <FaInstagram className={styles.svg} />
+            </Link>
           </div>
         </div>
         <div className={styles.links}>
